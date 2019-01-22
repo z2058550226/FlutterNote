@@ -1,14 +1,16 @@
 import 'package:english_words/english_words.dart';
 import 'package:flutter/material.dart';
-
 import 'package:flutter_app/ch2_foundation_widgets/s1_widget_introduction/counter.dart';
+import 'package:flutter_app/ch2_foundation_widgets/s1_widget_introduction/cupertino_test_route.dart';
 import 'package:flutter_app/ch2_foundation_widgets/s1_widget_introduction/tap_box.dart';
 import 'package:flutter_app/ch2_foundation_widgets/s1_widget_introduction/tap_box_b.dart';
 import 'package:flutter_app/ch2_foundation_widgets/s1_widget_introduction/tap_box_c.dart';
-import 'package:flutter_app/ch2_foundation_widgets/s1_widget_introduction/cupertino_test_route.dart';
+
 import 'ch2_foundation_widgets/s2_text_font_style/text_list.dart';
 import 'ch2_foundation_widgets/s3_button/button_demo.dart';
 import 'ch2_foundation_widgets/s4_image_icon/image_icon_route.dart';
+import 'ch2_foundation_widgets/s5_radio_button_check_box/switch_checkbox.dart';
+import 'ch2_foundation_widgets/s6_text_field_form/text_field_form.dart';
 
 void main() => runApp(MyApp());
 
@@ -81,15 +83,20 @@ class _MyHomePageState extends State<MyHomePage> {
           DemoButton(context, "Tap box", (context) => TapboxRoute()),
           DemoButton(context, "Tap box B", (context) => ParentWidget()),
           DemoButton(context, "Tap box C", (context) => ParentWidgetC()),
-          DemoButton(context, "Cupertino Test Route", (context) => CupertinoTestRoute()),
+          DemoButton(context, "Cupertino Test Route",
+              (context) => CupertinoTestRoute()),
           Divider(),
           Text(
             "2.2 文本、文字样式",
             textAlign: TextAlign.center,
           ),
-          DemoButton(context, "Text style list Route", (context) => TextStyleListRoute()),
-          DemoButton(context, "Button Route", (context) => ButtonDemoRoute()),
-          DemoButton(context, "Image Icon Route", (context) => ImageIconRoute()),
+          DemoButton(
+              context, "Text style list", (context) => TextStyleListRoute()),
+          DemoButton(context, "Button", (context) => ButtonDemoRoute()),
+          DemoButton(context, "Image Icon", (context) => ImageIconRoute()),
+          DemoButton(
+              context, "Switch Checkbox", (context) => SwitchCheckBoxRoute()),
+          DemoButton(context, "TextField Form", (context) => TextFieldRoute()),
         ]),
       ),
       floatingActionButton: FloatingActionButton(
