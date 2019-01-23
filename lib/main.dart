@@ -11,6 +11,9 @@ import 'ch2_foundation_widgets/s3_button/button_demo.dart';
 import 'ch2_foundation_widgets/s4_image_icon/image_icon_route.dart';
 import 'ch2_foundation_widgets/s5_radio_button_check_box/switch_checkbox.dart';
 import 'ch2_foundation_widgets/s6_text_field_form/text_field_form.dart';
+import 'ch2_foundation_widgets/s6_text_field_form/focus_test.dart';
+import 'ch2_foundation_widgets/s6_text_field_form/form_test.dart';
+import 'ch3_layout_widgets/s2_row_column/row_colum_test.dart';
 
 void main() => runApp(MyApp());
 
@@ -97,6 +100,9 @@ class _MyHomePageState extends State<MyHomePage> {
           DemoButton(
               context, "Switch Checkbox", (context) => SwitchCheckBoxRoute()),
           DemoButton(context, "TextField Form", (context) => TextFieldRoute()),
+          DemoButton(context, "Focus Test", (context) => FocusTestRoute()),
+          DemoButton(context, "Form Test", (context) => FormTestRoute()),
+          DemoButton(context, "Row Column", (context) => RowColumnRoute()),
         ]),
       ),
       floatingActionButton: FloatingActionButton(
