@@ -34,6 +34,7 @@ import 'ch5_scrollable_widges/s4_custom_scroll_view/custom_scroll_view.dart';
 import 'ch5_scrollable_widges/s5_scroll_controller/scroll_controller.dart';
 import 'ch5_scrollable_widges/s5_scroll_controller/scroll_notification.dart';
 import 'ch6_functional_widget/s1_pop_interceptor/will_pop_scope.dart';
+import 'ch6_functional_widget/s2_data_share/inherited_widget.dart';
 
 void main() => runApp(MyApp());
 
@@ -176,6 +177,7 @@ class _MyHomePageState extends State<MyHomePage> {
             textAlign: TextAlign.center,
           ),
           DemoButton(context, "返回拦截", (context) => WillPopScopeTestRoute()),
+          DemoButton(context, "数据共享", (context) => InheritedWidgetTestRoute()),
         ]),
       ),
       floatingActionButton: FloatingActionButton(
