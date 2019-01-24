@@ -1,6 +1,6 @@
 # flutter_app
 
-A flutter demo app. This demo is written with reference to *[Flutter In Action](https://book.flutterchina.club/)*
+A flutter demo app. This demo is written with reference to the book *[Flutter In Action](https://book.flutterchina.club/)*
 
 ## Getting Started
 
