@@ -31,6 +31,9 @@ import 'ch5_scrollable_widges/s3_grid_view/grid_view.dart';
 import 'ch5_scrollable_widges/s3_grid_view/grid_delegate.dart';
 import 'ch5_scrollable_widges/s3_grid_view/infinite_grid_view.dart';
 import 'ch5_scrollable_widges/s4_custom_scroll_view/custom_scroll_view.dart';
+import 'ch5_scrollable_widges/s5_scroll_controller/scroll_controller.dart';
+import 'ch5_scrollable_widges/s5_scroll_controller/scroll_notification.dart';
+import 'ch6_functional_widget/s1_pop_interceptor/will_pop_scope.dart';
 
 void main() => runApp(MyApp());
 
@@ -163,6 +166,16 @@ class _MyHomePageState extends State<MyHomePage> {
               (context) => InfiniteGridViewRoute()),
           DemoButton(context, "CustomScrollView",
               (context) => CustomScrollViewTestRoute()),
+          DemoButton(context, "Scroll Controller",
+              (context) => ScrollControllerTestRoute()),
+          DemoButton(context, "Scroll Notification",
+              (context) => ScrollNotificationTestRoute()),
+          Divider(),
+          Text(
+            "5. 功能类Widgets",
+            textAlign: TextAlign.center,
+          ),
+          DemoButton(context, "返回拦截", (context) => WillPopScopeTestRoute()),
         ]),
       ),
       floatingActionButton: FloatingActionButton(
