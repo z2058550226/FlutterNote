@@ -1,6 +1,6 @@
 # flutter_app
 
-A new Flutter application.
+A flutter demo app. This demo is written with reference to *[Flutter In Action](https://book.flutterchina.club/)*
 
 ## Getting Started
 
