@@ -10,10 +10,27 @@ import 'ch2_foundation_widgets/s2_text_font_style/text_list.dart';
 import 'ch2_foundation_widgets/s3_button/button_demo.dart';
 import 'ch2_foundation_widgets/s4_image_icon/image_icon_route.dart';
 import 'ch2_foundation_widgets/s5_radio_button_check_box/switch_checkbox.dart';
-import 'ch2_foundation_widgets/s6_text_field_form/text_field_form.dart';
 import 'ch2_foundation_widgets/s6_text_field_form/focus_test.dart';
 import 'ch2_foundation_widgets/s6_text_field_form/form_test.dart';
+import 'ch2_foundation_widgets/s6_text_field_form/text_field_form.dart';
 import 'ch3_layout_widgets/s2_row_column/row_colum_test.dart';
+import 'ch3_layout_widgets/s3_flex/flex_test.dart';
+import 'ch3_layout_widgets/s4_wrap_flow/wrap_flow.dart';
+import 'ch3_layout_widgets/s5_stack_positioned/stack_positioned.dart';
+import 'ch4_container_widgets/s1_padding/padding.dart';
+import 'ch4_container_widgets/s2_constained_box/constained_box.dart';
+import 'ch4_container_widgets/s2_constained_box/sized_box.dart';
+import 'ch4_container_widgets/s3_decorated_box/decorated_box.dart';
+import 'ch4_container_widgets/s4_transform/transform.dart';
+import 'ch4_container_widgets/s5_container/container.dart';
+import 'ch4_container_widgets/s5_container/padding_margin.dart';
+import 'ch5_scrollable_widges/s1_single_child_scroll_view/single_child_scroll_view.dart';
+import 'package:flutter_app/ch5_scrollable_widges/s2_list_view/listview_test.dart';
+import 'package:flutter_app/ch5_scrollable_widges/s2_list_view/listview_header.dart';
+import 'ch5_scrollable_widges/s3_grid_view/grid_view.dart';
+import 'ch5_scrollable_widges/s3_grid_view/grid_delegate.dart';
+import 'ch5_scrollable_widges/s3_grid_view/infinite_grid_view.dart';
+import 'ch5_scrollable_widges/s4_custom_scroll_view/custom_scroll_view.dart';
 
 void main() => runApp(MyApp());
 
@@ -102,7 +119,50 @@ class _MyHomePageState extends State<MyHomePage> {
           DemoButton(context, "TextField Form", (context) => TextFieldRoute()),
           DemoButton(context, "Focus Test", (context) => FocusTestRoute()),
           DemoButton(context, "Form Test", (context) => FormTestRoute()),
+          Divider(),
+          Text(
+            "3. 布局类Widgets",
+            textAlign: TextAlign.center,
+          ),
           DemoButton(context, "Row Column", (context) => RowColumnRoute()),
+          DemoButton(
+              context, "Flex layout", (context) => FlexLayoutTestRoute()),
+          DemoButton(context, "Wrap Flow", (context) => WrapFlowRoute()),
+          DemoButton(
+              context, "Stack Positioned", (context) => StackPositionedRoute()),
+          Divider(),
+          Text(
+            "4. 容器类Widgets",
+            textAlign: TextAlign.center,
+          ),
+          DemoButton(context, "Padding", (context) => PaddingTestRoute()),
+          DemoButton(
+              context, "ConstainedBox", (context) => ConstrainedBoxRoute()),
+          DemoButton(context, "SizedBox", (context) => SizedBoxRoute()),
+          DemoButton(
+              context, "Decorated Box", (context) => DecoratedBoxRoute()),
+          DemoButton(context, "Transform", (context) => TransformRoute()),
+          DemoButton(context, "Container", (context) => ContainerTestRoute()),
+          DemoButton(
+              context, "Padding Margin", (context) => PaddingMarginRoute()),
+          Divider(),
+          Text(
+            "5. 滚动类Widgets",
+            textAlign: TextAlign.center,
+          ),
+          DemoButton(context, "SingleChildScrollView",
+              (context) => SingleChildScrollViewRoute()),
+          DemoButton(
+              context, "Infinite ListView", (context) => ListViewRoute()),
+          DemoButton(
+              context, "ListView Header", (context) => ListViewHeaderRoute()),
+          DemoButton(context, "GridView", (context) => GridViewRoute()),
+          DemoButton(
+              context, "GridView Delegate", (context) => GridDelegateRoute()),
+          DemoButton(context, "Infinite GridView",
+              (context) => InfiniteGridViewRoute()),
+          DemoButton(context, "CustomScrollView",
+              (context) => CustomScrollViewTestRoute()),
         ]),
       ),
       floatingActionButton: FloatingActionButton(
