@@ -35,6 +35,7 @@ import 'ch5_scrollable_widges/s5_scroll_controller/scroll_controller.dart';
 import 'ch5_scrollable_widges/s5_scroll_controller/scroll_notification.dart';
 import 'ch6_functional_widget/s1_pop_interceptor/will_pop_scope.dart';
 import 'ch6_functional_widget/s2_data_share/inherited_widget.dart';
+import 'ch6_functional_widget/s3_theme/theme_test.dart';
 
 void main() => runApp(MyApp());
 
@@ -173,11 +174,18 @@ class _MyHomePageState extends State<MyHomePage> {
               (context) => ScrollNotificationTestRoute()),
           Divider(),
           Text(
-            "5. 功能类Widgets",
+            "6. 功能类Widgets",
             textAlign: TextAlign.center,
           ),
           DemoButton(context, "返回拦截", (context) => WillPopScopeTestRoute()),
           DemoButton(context, "数据共享", (context) => InheritedWidgetTestRoute()),
+          DemoButton(context, "主题", (context) => ThemeTestRoute()),
+          Divider(),
+          Text(
+            "7. 事件，消息",
+            textAlign: TextAlign.center,
+          ),
+          DemoButton(context, "主题", (context) => ThemeTestRoute()),
         ]),
       ),
       floatingActionButton: FloatingActionButton(

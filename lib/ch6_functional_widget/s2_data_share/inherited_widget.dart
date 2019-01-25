@@ -12,7 +12,9 @@ class _InheritedWidgetTestRouteState extends State<InheritedWidgetTestRoute> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("数据共享"),),
+      appBar: AppBar(
+        title: Text("数据共享"),
+      ),
       body: Center(
         child: ShareDataWidget(
           //使用ShareDataWidget
@@ -61,7 +63,7 @@ class __TestWidgetState extends State<_TestWidget> {
 class ShareDataWidget extends InheritedWidget {
   ShareDataWidget({@required this.data, Widget child}) : super(child: child);
 
-  int data; //需要在子树中共享的数据，保存点击次数
+  final int data; //需要在子树中共享的数据，保存点击次数
 
   //定义一个便捷方法，方便子树中的widget获取共享数据
   static ShareDataWidget of(BuildContext context) {
