@@ -5,6 +5,8 @@ import 'package:flutter_app/ch2_foundation_widgets/s1_widget_introduction/cupert
 import 'package:flutter_app/ch2_foundation_widgets/s1_widget_introduction/tap_box.dart';
 import 'package:flutter_app/ch2_foundation_widgets/s1_widget_introduction/tap_box_b.dart';
 import 'package:flutter_app/ch2_foundation_widgets/s1_widget_introduction/tap_box_c.dart';
+import 'package:flutter_app/ch5_scrollable_widges/s2_list_view/listview_header.dart';
+import 'package:flutter_app/ch5_scrollable_widges/s2_list_view/listview_test.dart';
 
 import 'ch2_foundation_widgets/s2_text_font_style/text_list.dart';
 import 'ch2_foundation_widgets/s3_button/button_demo.dart';
@@ -25,10 +27,8 @@ import 'ch4_container_widgets/s4_transform/transform.dart';
 import 'ch4_container_widgets/s5_container/container.dart';
 import 'ch4_container_widgets/s5_container/padding_margin.dart';
 import 'ch5_scrollable_widges/s1_single_child_scroll_view/single_child_scroll_view.dart';
-import 'package:flutter_app/ch5_scrollable_widges/s2_list_view/listview_test.dart';
-import 'package:flutter_app/ch5_scrollable_widges/s2_list_view/listview_header.dart';
-import 'ch5_scrollable_widges/s3_grid_view/grid_view.dart';
 import 'ch5_scrollable_widges/s3_grid_view/grid_delegate.dart';
+import 'ch5_scrollable_widges/s3_grid_view/grid_view.dart';
 import 'ch5_scrollable_widges/s3_grid_view/infinite_grid_view.dart';
 import 'ch5_scrollable_widges/s4_custom_scroll_view/custom_scroll_view.dart';
 import 'ch5_scrollable_widges/s5_scroll_controller/scroll_controller.dart';
@@ -36,6 +36,15 @@ import 'ch5_scrollable_widges/s5_scroll_controller/scroll_notification.dart';
 import 'ch6_functional_widget/s1_pop_interceptor/will_pop_scope.dart';
 import 'ch6_functional_widget/s2_data_share/inherited_widget.dart';
 import 'ch6_functional_widget/s3_theme/theme_test.dart';
+import 'ch7_event_notification/s1_point_event/pointer_event.dart';
+import 'ch7_event_notification/s1_point_event/behavior_test.dart';
+import 'ch7_event_notification/s2_gesture/gesture_test.dart';
+import 'ch7_event_notification/s2_gesture/drag_test.dart';
+import 'ch7_event_notification/s2_gesture/drag_vertical.dart';
+import 'ch7_event_notification/s2_gesture/scale.dart';
+import 'ch7_event_notification/s2_gesture/gesture_recognizer.dart';
+import 'ch7_event_notification/s2_gesture/gesture_arena.dart';
+import 'ch7_event_notification/s2_gesture/gesture_conflict.dart';
 
 void main() => runApp(MyApp());
 
@@ -185,7 +194,16 @@ class _MyHomePageState extends State<MyHomePage> {
             "7. 事件，消息",
             textAlign: TextAlign.center,
           ),
-          DemoButton(context, "主题", (context) => ThemeTestRoute()),
+          DemoButton(context, "事件冒泡", (context) => PointerTest1Route()),
+          DemoButton(context, "Behavior", (context) => BehaviorTest1Route()),
+          DemoButton(context, "gesture", (context) => GestureTestRoute()),
+          DemoButton(context, "Drag", (context) => DragTestRoute()),
+          DemoButton(context, "单一方向拖动", (context) => DragVerticalRoute()),
+          DemoButton(context, "缩放监听", (context) => ScaleGestureTestRoute()),
+          DemoButton(
+              context, "手势识别器", (context) => GestureRecognizerTestRoute()),
+          DemoButton(context, "手势竞争", (context) => GestureArenaRoute()),
+          DemoButton(context, "手势冲突", (context) => GestureConflictRoute()),
         ]),
       ),
       floatingActionButton: FloatingActionButton(
